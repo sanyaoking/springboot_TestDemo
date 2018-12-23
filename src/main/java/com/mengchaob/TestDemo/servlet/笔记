@@ -1,0 +1,11 @@
+本包展示springboot如何整合servlet、listener、filter
+每一个整合都以两种不同的java配置方式来实现，以加深印象。
+StartApp1是第一种基于注解方式整合
+StartApp2是第二种基于java配置方式整合
+1.通过测试来看：
+  @EnableWebMvc//启用springmvc
+  @ComponentScan("com.mengchaob.TestDemo.servlet") 这两个可以组合使用springmvc
+  @ServletComponentScan和@WebServlet组合使用
+2.使用方法注解整合servlet、listener、filter，主要是通过ServletRegistrationBean、ServletListenerRegistrationBean、FilterRegistrationBean
+  这几个类，使用ban注解注入spring中去。（这一步可以用spring的java配置来实现）
+3.SpringBoot 从 classpath/static 的目录存放静态资源，注意目录名称必须是 static；也可以在 src/main/webapp 目录名称必须要 webapp下面
